@@ -2,14 +2,15 @@
   <div class="contain">
     <address>杭州</address>
     <ul>
-      <li
+      <router-link
+        tag="li"
         v-for="(item, index) in tabList"
         :key="index"
-        :class="{ active: liIndex === index }"
-        @click="handleClick(index)"
+        :to="item.url"
+        active-class="active"
       >
-        {{ item }}
-      </li>
+        {{ item.title }}
+      </router-link>
     </ul>
     <span class="iconfont icon-fangdajing"></span>
   </div>
@@ -19,21 +20,25 @@
 export default {
   data() {
     return {
-      tabList: ["热映", "影院", "待映", "经典电影"],
-      liIndex: 0
+      tabList: [
+        {
+          title: "热映",
+          url: "hot"
+        },
+        {
+          title: "影院",
+          url: "cinema"
+        },
+        {
+          title: "待映",
+          url: "wait"
+        },
+        {
+          title: "经典电影",
+          url: "classical"
+        },
+      ]
     };
-  },
-
-  components: {},
-
-  computed: {},
-
-  mounted() {},
-
-  methods: {
-    handleClick(i) {
-      this.liIndex = i;
-    }
   }
 };
 </script>

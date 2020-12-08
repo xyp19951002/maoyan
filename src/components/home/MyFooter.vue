@@ -1,15 +1,16 @@
 <template>
   <footer>
     <ul>
-      <li
-        v-for="(item, index) in footList"
+      <router-link
+        tag="li"
+        v-for="item in footList"
         :key="item.title"
-        :class="{ active: itemIndex === index }"
-        @click="hundleClick(index)"
+        :to="item.url"
+        active-class="active"
       >
         <span class="iconfont" :class="item.icon"></span>
         <p>{{ item.title }}</p>
-      </li>
+      </router-link>
     </ul>
   </footer>
 </template>
@@ -21,39 +22,32 @@ export default {
       footList: [
         {
           title: "电影/影院",
-          icon: "icon-dianyingjiaopian"
+          icon: "icon-dianyingjiaopian",
+          url: "/movie"
         },
         {
           title: "视频",
-          icon: "icon-shipin"
+          icon: "icon-shipin",
+          url: "/video"
         },
         {
           title: "小视频",
-          icon: "icon-shipin"
+          icon: "icon-shipin",
+          url: "minivideo"
         },
         {
           title: "演出",
-          icon: "icon-yanchu"
+          icon: "icon-yanchu",
+          url: "/show"
         },
         {
           title: "我的",
-          icon: "icon-wode"
+          icon: "icon-wode",
+          url: "/mine"
         }
       ],
       itemIndex: 0
     };
-  },
-
-  components: {},
-
-  computed: {},
-
-  mounted() {},
-
-  methods: {
-    hundleClick(i) {
-      this.itemIndex = i;
-    }
   }
 };
 </script>
