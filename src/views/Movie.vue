@@ -5,7 +5,10 @@
       <my-nav-tab />
     </section>
     <section class="content">
-      <router-view></router-view>
+      <keep-alive>
+        <router-view v-if="$route.meta.requireAlive"></router-view>
+      </keep-alive>
+      <router-view v-if="!$route.meta.requireAlive"></router-view>
     </section>
   </div>
 </template>

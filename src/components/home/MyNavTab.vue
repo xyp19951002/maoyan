@@ -36,7 +36,7 @@ export default {
         {
           title: "经典电影",
           url: "classical"
-        },
+        }
       ]
     };
   }
@@ -65,7 +65,7 @@ export default {
       font-weight: bolder;
       position: relative;
       &:last-of-type {
-        width: 68px;
+        width: 73px;
       }
     }
     .active {

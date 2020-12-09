@@ -37,15 +37,7 @@ export default {
         click: true
       });
     }
-  },
-
-  components: {},
-
-  computed: {},
-
-  mounted() {},
-
-  methods: {}
+  }
 };
 </script>
 <style lang="scss" scoped>

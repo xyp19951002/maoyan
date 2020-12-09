@@ -18,19 +18,10 @@ export default {
     movielist: Array,
     isBottom: Boolean
   },
-  data() {
-    return {};
-  },
 
   components: {
     MyMovieItem
-  },
-
-  computed: {},
-
-  mounted() {},
-
-  methods: {}
+  }
 };
 </script>
 <style lang="scss" scoped>

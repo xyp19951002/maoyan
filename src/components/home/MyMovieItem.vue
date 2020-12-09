@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li @click="goToDetail(item.movieid)">
     <div class="img-contain">
       <img :src="item.img | formatUrl" alt="" />
     </div>
@@ -34,13 +34,12 @@ export default {
     }
   },
 
-  components: {},
-
-  computed: {},
-
-  mounted() {},
-
-  methods: {}
+  methods: {
+    goToDetail(id) {
+      // this.$router.push("/detail/" + id);
+      this.$router.push({ name: "detail", params: { movieId: id } });
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

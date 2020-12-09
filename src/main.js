@@ -6,6 +6,9 @@ import router from "./router";
 Vue.config.productionTip = false;
 
 import "./assets/css/reset.scss";
+
+import "nprogress/nprogress.css";
+
 import "./assets/fonts/iconfont.css";
 import "amfe-flexible";
 
